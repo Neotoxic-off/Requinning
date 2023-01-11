@@ -1,0 +1,100 @@
+﻿<Window x:Class="Requinning.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Requinning"
+        xmlns:ViewModels="clr-namespace:Requinning.ViewModels"
+        mc:Ignorable="d"
+        FontFamily="{StaticResource Dosis}"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource Background}"
+        Foreground="{StaticResource Action}"
+        Height="800"
+        Width="600"
+        MinHeight="800"
+        MinWidth="600"
+        ResizeMode="NoResize"
+        Title="{Binding Settings.Version}">
+
+    <Window.DataContext>
+        <ViewModels:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Higher}" Content="&lt;" Foreground="{StaticResource Normal}" FontSize="30"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Higher}" Content=" Re" Foreground="{StaticResource Action}" FontSize="40"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Higher}" Content="Quinning " Foreground="{StaticResource Title}" FontSize="40"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Higher}" Content="/&gt;" Foreground="{StaticResource Normal}" FontSize="30"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Author: neo" Foreground="{StaticResource Normal}" FontSize="15"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Separator Height="1" Background="{StaticResource Normal}" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel>
+                    <CheckBox Style="{StaticResource ModernCheck}" Content="Obfuscate Methods" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <CheckBox Style="{StaticResource ModernCheck}" Content="Obfuscate Namespaces" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <CheckBox Style="{StaticResource ModernCheck}" Content="Obfuscate Assembly" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <CheckBox Style="{StaticResource ModernCheck}" Content="Obfuscate Strings" Foreground="{StaticResource Normal}" FontSize="15"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{StaticResource FillButton}" Command="{Binding SelectFileCommand}" Content="File"/>
+                    <Button Style="{StaticResource FillButton}" Command="{Binding ObfuscateCommand}" Content="Obfuscate"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Separator Height="1" Background="{StaticResource Normal}" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label Content="Status:" Foreground="{StaticResource Title}" FontSize="15"/>
+            </Grid>
+            
+            <Grid Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Label Content="{Binding Logger.Log}" Foreground="{StaticResource Title}" FontSize="15"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\MainModel.cs" />
+    <Compile Include="Models\ProtectionsModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LoggerViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -119,8 +120,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Fonts\Dosis.ttf" />
-    <Resource Include="Fonts\Squared.ttf" />
     <Resource Include="Fonts\Higher.ttf" />
+    <Resource Include="Fonts\Modeka.otf" />
+    <Resource Include="Fonts\A little sunshine.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

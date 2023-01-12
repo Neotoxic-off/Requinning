@@ -9,13 +9,14 @@
         <Brush x:Key="ContentBackground">#404251</Brush>
         <Brush x:Key="Normal">#ADB1BF</Brush>
         <Brush x:Key="Title">#FFE7F5</Brush>
-        <Brush x:Key="Action">#E53155</Brush>
-        <Brush x:Key="Hover">#FF4C64</Brush>
+        <Brush x:Key="Action">#c04cfd</Brush>
+        <Brush x:Key="Hover">#7209b7</Brush>
         <Brush x:Key="Disabled">#404251</Brush>
 
-        <FontFamily x:Key="Dosis" >/Fonts/#Dosis</FontFamily>
-        <FontFamily x:Key="Squared" >/Fonts/#Squared Display</FontFamily>
-        <FontFamily x:Key="Higher" >/Fonts/#Higher</FontFamily>
+        <FontFamily x:Key="Dosis">/Fonts/#Dosis</FontFamily>
+        <FontFamily x:Key="Sun">/Fonts/#A little sunshine</FontFamily>
+        <FontFamily x:Key="Modeka">/Fonts/#Modeka</FontFamily>
+        <FontFamily x:Key="Higher">/Fonts/#Higher</FontFamily>
 
         <Style TargetType="Button" x:Key="FillButton">
             <Setter Property="Background" Value="{StaticResource Action}"/>

@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Win32;
 using Requinning.Themes;
-using Requinning.Views;
 
 namespace Requinning.ViewModels
 {
@@ -26,7 +25,6 @@ namespace Requinning.ViewModels
         public DelegateCommand SelectModuleCommand { get; set; }
         public DelegateCommand SelectFileCommand { get; set; }
         public DelegateCommand ChangeThemeCommand { get; set; }
-        public DelegateCommand CloseCommand { get; set; }
 
 
         public List<string> Modules { get; set; }
@@ -44,7 +42,6 @@ namespace Requinning.ViewModels
             SelectModuleCommand = new DelegateCommand(SelectModule);
             SelectFileCommand = new DelegateCommand(SelectFile);
             ChangeThemeCommand = new DelegateCommand(ChangeTheme);
-            CloseCommand = new DelegateCommand(CloseWindow);
 
             Theme = new Theme();
             ThemeIndex = 0;
@@ -104,11 +101,6 @@ namespace Requinning.ViewModels
             {
                 UpdateModules((string)param);
             }
-        }
-
-        private void CloseWindow(object param)
-        {
-            PopupViewModel popupWindow = new PopupViewModel("test", "message");
         }
 
         private void ChangeTheme(object param)

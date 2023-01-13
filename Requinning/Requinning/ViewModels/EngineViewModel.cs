@@ -67,6 +67,7 @@ namespace Requinning.ViewModels
             {
                 { Collection.Assembly.Name, Collection.Assembly.Execute },
                 { Collection._Module.Name, Collection._Module.Execute },
+                { Collection._GUID.Name, Collection._GUID.Execute },
                 { Collection.Methods.Name, Collection.Methods.Execute },
                 { Collection.Namespaces.Name, Collection.Namespaces.Execute },
                 { Collection.Classes.Name, Collection.Classes.Execute },

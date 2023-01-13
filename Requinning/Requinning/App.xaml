@@ -18,9 +18,9 @@
         <FontFamily x:Key="Modeka">/Fonts/#Modeka</FontFamily>
         <FontFamily x:Key="Higher">/Fonts/#Higher</FontFamily>
 
-        <Style TargetType="Button" x:Key="FillButton">
-            <Setter Property="Background" Value="{StaticResource Action}"/>
-            <Setter Property="Foreground" Value="{StaticResource Title}"/>
+        <Style TargetType="{x:Type Button}" x:Key="FillButton">
+            <Setter Property="Background" Value="{DynamicResource Action}"/>
+            <Setter Property="Foreground" Value="{DynamicResource Title}"/>
             <Setter Property="FontWeight" Value="Heavy"/>
             <Setter Property="FontFamily" Value="Fonts/#Dosis"/>
             <Setter Property="FontSize" Value="15"/>
@@ -30,7 +30,7 @@
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="Button">
+                    <ControlTemplate TargetType="{x:Type Button}">
                         <Border Background="{TemplateBinding Background}"
                             CornerRadius="5"
                             BorderThickness="0"
@@ -44,8 +44,8 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="{StaticResource Hover}"/>
-                    <Setter Property="Foreground" Value="{StaticResource Normal}"/>
+                    <Setter Property="Background" Value="{DynamicResource Hover}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource Title}"/>
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
@@ -69,9 +69,9 @@
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
             <Setter Property="TextAlignment" Value="center"/>
-            <Setter Property="FontFamily" Value="{StaticResource Dosis}"/>
-            <Setter Property="Foreground" Value="{StaticResource Normal}"/>
-            <Setter Property="Background" Value="{StaticResource ContentBackground}"/>
+            <Setter Property="FontFamily" Value="{DynamicResource Dosis}"/>
+            <Setter Property="Foreground" Value="{DynamicResource Normal}"/>
+            <Setter Property="Background" Value="{DynamicResource ContentBackground}"/>
             <Setter Property="AllowDrop" Value="true"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -79,7 +79,7 @@
                         <Border Name="Border"
                               CornerRadius="5"
                               Padding="2"
-                              Background="{StaticResource ContentBackground}"
+                              Background="{DynamicResource ContentBackground}"
                               BorderBrush="Transparent"
                               BorderThickness="0">
                             <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
@@ -104,12 +104,12 @@
                                       CornerRadius="5" 
                                       Background="Transparent"
                                       BorderThickness="1"
-                                      BorderBrush="{StaticResource Action}">
+                                      BorderBrush="{DynamicResource Action}">
                                     <Path
                                         Width="10" Height="10"
                                         x:Name="CheckMark"
                                         SnapsToDevicePixels="False" 
-                                        Stroke="{StaticResource Action}"
+                                        Stroke="{DynamicResource Action}"
                                         StrokeThickness="2"
                                         Data="M 0 0 L 10 10 M 0 10 L 10 0" />
                                 </Border>

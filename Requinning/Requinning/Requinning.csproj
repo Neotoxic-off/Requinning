@@ -97,6 +97,7 @@
     <Compile Include="Models\Protections\Map.cs" />
     <Compile Include="Models\Protections\Ints.cs" />
     <Compile Include="Models\Protections\Classes.cs" />
+    <Compile Include="Models\Protections\GUID.cs" />
     <Compile Include="Models\Protections\Module.cs" />
     <Compile Include="Models\Protections\Strings.cs" />
     <Compile Include="Models\Protections\Methods.cs" />
@@ -106,6 +107,8 @@
     <Compile Include="Models\Protections\Parameters.cs" />
     <Compile Include="Models\Protections\Properties.cs" />
     <Compile Include="Models\Protections\ProtectionBaseModel.cs" />
+    <Compile Include="Models\ThemeModel.cs" />
+    <Compile Include="Themes\Theme.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LoggerViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

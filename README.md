@@ -2,10 +2,21 @@
 🐝 Obfuscator For Reverse Engineering Evasion
 
 ### Obfuscation
-- Function parameters name
-- Events name
-- Methods name
-- .ctor remover
+#### Clear
+- Assembly
+
+#### Rename
+- Rename Module
+- Rename Methods
+- Rename Parameters
+- Rename Events
+- Rename Fields
+
+#### Remove
+- Ctor
+
+#### Spoof
+- GUID
 
 ### Example
 - Before
@@ -45,10 +56,3 @@ private void \ref1\re74\red4\re32\rece\re4f\rec9\re94\recb\re65\re5f\re0c\read\r
 	}
 }
 ```
-
-### Encoding
-- SHA256
-
-### Tasks
-- Create folder with all protections in it 
-- Create a protection base model

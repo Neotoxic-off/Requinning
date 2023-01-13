@@ -65,6 +65,7 @@
             <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel>
                     <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Clean Assembly" Content="Clean Assembly" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Spoof Guid" Content="Spoof GUID" Foreground="{StaticResource Normal}" FontSize="15"/>
                     <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Module" Content="Rename Module" Foreground="{StaticResource Normal}" FontSize="15"/>
                     <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Methods" Content="Rename Methods" Foreground="{StaticResource Normal}" FontSize="15"/>
                     <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Namespaces" Content="Rename Namespaces" Foreground="{StaticResource Normal}" FontSize="15"/>

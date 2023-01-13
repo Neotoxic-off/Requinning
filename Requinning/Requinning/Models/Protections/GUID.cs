@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace Requinning.Models.Protections
 {
-    public class Module: ProtectionBaseModel
+    public class GUID: ProtectionBaseModel
     {
-        public Module(LoggerViewModel logger, ModuleDef Module) : base("Rename Module", logger, Module)
+        public GUID(LoggerViewModel logger, ModuleDef Module) : base("Spoof Guid", logger, Module)
         {
 
         }        
 
         public override void Execute()
         {
-            Logger.Record("Renaming module...");
+            Logger.Record("Spoofing guid...");
 
-            Module.Name = Rename(Module.Name);
+            Module.Mvid = GUIDSpoof();
 
-            Logger.Record("Module renamed");
+            Logger.Record("Guid spoofed");
         }
     }
 }

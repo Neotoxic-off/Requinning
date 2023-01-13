@@ -22,6 +22,7 @@ namespace Requinning.Models.Protections
         public Classes Classes { get; set; }
         public Ctor Ctor { get; set; }
         public Module _Module { get; set; }
+        public GUID _GUID { get; set; }
 
         public Collection(LoggerViewModel logger, ModuleDef Module)
         {
@@ -37,6 +38,7 @@ namespace Requinning.Models.Protections
             Classes = new Classes(logger, Module);
             Ctor = new Ctor(logger, Module);
             _Module = new Module(logger, Module);
+            _GUID = new GUID(logger, Module);
         }
     }
 }

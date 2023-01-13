@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Win32;
+using Requinning.Themes;
 
 namespace Requinning.ViewModels
 {
@@ -15,6 +16,8 @@ namespace Requinning.ViewModels
         public SettingsViewModel Settings { get; set; }
         public EngineViewModel Engine { get; set; }
         public LoggerViewModel Logger { get; set; }
+
+        public Theme Theme { get; set; }
 
         private DelegateCommand Loader { get; set; }
         public DelegateCommand ObfuscateCommand { get; set; }
@@ -36,6 +39,8 @@ namespace Requinning.ViewModels
             SelectModuleCommand = new DelegateCommand(SelectModule);
             SelectFileCommand = new DelegateCommand(SelectFile);
 
+            Theme = new Theme();
+
             Modules = new List<string>();
 
             Loader.Execute(null);
@@ -43,6 +48,8 @@ namespace Requinning.ViewModels
 
         private void Load(object param)
         {
+            Theme.Apply("Purple");
+
             Logger.Record("Loading version...");
             Settings.LoadVersion();
             Logger.Record($"Version '{Settings.Version}' loaded");

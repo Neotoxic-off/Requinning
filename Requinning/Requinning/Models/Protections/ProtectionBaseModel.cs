@@ -45,6 +45,37 @@ namespace Requinning.Models.Protections
             return;
         }
 
+        public Guid GUIDSpoof()
+        {
+            string buffer = "";
+            int[] ascii =
+            {
+                48,
+                57,
+                97,
+                122
+            };
+            int[] pattern = {
+                8,
+                4,
+                4,
+                4,
+                12
+            };
+
+            foreach (int patternIndex in pattern)
+            {
+                for (int i = 0; i < patternIndex; i++)
+                {
+                    buffer += (random.Next(0, 1) == 0 ? (char)random.Next(ascii[0], ascii[1]) : (char)random.Next(ascii[2], ascii[3]));
+                }
+                if (patternIndex != pattern[pattern.Length - 1])
+                    buffer += "-";
+            }
+
+            return (Guid.Parse(buffer));
+        }
+
         private string Encode(string data)
         {
             SHA256Managed crypt = new SHA256Managed();

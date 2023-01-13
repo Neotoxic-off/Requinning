@@ -1,25 +1,26 @@
 # Requinning
 🐝 Obfuscator For Reverse Engineering Evasion
 
-### Obfuscation
-#### Clear
+## Obfuscation
+### Clear
 - Assembly
 
-#### Rename
+### Rename
 - Rename Module
 - Rename Methods
 - Rename Parameters
 - Rename Events
 - Rename Fields
 
-#### Remove
+### Remove
 - Ctor
 
-#### Spoof
+### Spoof
 - GUID
 
-### Example
+## Example
 - Before
+
 ```C#
 private void LoadAssembly()
 {
@@ -39,6 +40,7 @@ private void LoadAssembly()
 ```
 
 - After
+
 ```C#
 private void \ref1\re74\red4\re32\rece\re4f\rec9\re94\recb\re65\re5f\re0c\read\re6d\re2a\re0d\reb8\re77\re9e\ree3\reb2\re4a\re67\re17\re7f\re15\recb\rece\re3b\re79\re65\reae()
 {

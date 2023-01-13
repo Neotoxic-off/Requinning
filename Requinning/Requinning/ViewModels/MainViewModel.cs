@@ -107,14 +107,14 @@ namespace Requinning.ViewModels
         {
             List<Models.ThemeModel.Theme> themes = Theme.GetThemes();
 
-            if (ThemeIndex >= themes.Count() - 1)
-            {
-                ThemeIndex = 0;
-            }
-            else
-            {
-                ThemeIndex++;
-            }
+            ThemeIndex = ((ThemeIndex >= themes.Count() - 1) ? 0 : ThemeIndex++);
+   
+             
+       
+ 
+      
+
+
 
             Theme.Apply(themes[ThemeIndex].name);
         }

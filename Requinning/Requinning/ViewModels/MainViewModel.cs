@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Win32;
 using Requinning.Themes;
+using Requinning.Views;
 
 namespace Requinning.ViewModels
 {
@@ -18,12 +19,16 @@ namespace Requinning.ViewModels
         public LoggerViewModel Logger { get; set; }
 
         public Theme Theme { get; set; }
+        private int ThemeIndex { get; set; }
 
         private DelegateCommand Loader { get; set; }
         public DelegateCommand ObfuscateCommand { get; set; }
         public DelegateCommand SelectModuleCommand { get; set; }
         public DelegateCommand SelectFileCommand { get; set; }
-        
+        public DelegateCommand ChangeThemeCommand { get; set; }
+        public DelegateCommand CloseCommand { get; set; }
+
+
         public List<string> Modules { get; set; }
 
         public MainViewModel()
@@ -38,8 +43,11 @@ namespace Requinning.ViewModels
             ObfuscateCommand = new DelegateCommand(Engine.Obfuscate);
             SelectModuleCommand = new DelegateCommand(SelectModule);
             SelectFileCommand = new DelegateCommand(SelectFile);
+            ChangeThemeCommand = new DelegateCommand(ChangeTheme);
+            CloseCommand = new DelegateCommand(CloseWindow);
 
             Theme = new Theme();
+            ThemeIndex = 0;
 
             Modules = new List<string>();
 
@@ -48,8 +56,6 @@ namespace Requinning.ViewModels
 
         private void Load(object param)
         {
-            Theme.Apply("Purple");
-
             Logger.Record("Loading version...");
             Settings.LoadVersion();
             Logger.Record($"Version '{Settings.Version}' loaded");
@@ -98,6 +104,27 @@ namespace Requinning.ViewModels
             {
                 UpdateModules((string)param);
             }
+        }
+
+        private void CloseWindow(object param)
+        {
+            PopupViewModel popupWindow = new PopupViewModel("test", "message");
+        }
+
+        private void ChangeTheme(object param)
+        {
+            List<Models.ThemeModel.Theme> themes = Theme.GetThemes();
+
+            if (ThemeIndex >= themes.Count() - 1)
+            {
+                ThemeIndex = 0;
+            }
+            else
+            {
+                ThemeIndex++;
+            }
+
+            Theme.Apply(themes[ThemeIndex].name);
         }
     }
 }

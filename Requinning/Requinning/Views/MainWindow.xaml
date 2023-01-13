@@ -36,19 +36,39 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
             <Grid Grid.Column="0">
-                
+                <Button Style="{StaticResource TransparentButton}" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ChangeThemeCommand}" Height="24" Width="24">
+                    <Grid>
+                        <Image Source="/Assets/theme.png"/>
+                    </Grid>
+                </Button>
             </Grid>
+            
             <Grid Grid.Column="1">
                 <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Sun}" Content="&lt;" Foreground="{StaticResource Normal}" FontSize="30"/>
-                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Sun}" Content=" Re" Foreground="{StaticResource Action}" FontSize="40" FontWeight="Heavy"/>
-                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Sun}" Content="Quinning " Foreground="{StaticResource Title}" FontSize="40" FontWeight="Heavy"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Sun}" Content=" Re" Foreground="{DynamicResource Action}" FontSize="40" FontWeight="Heavy"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Sun}" Content="Quinning " Foreground="{DynamicResource Title}" FontSize="40" FontWeight="Heavy"/>
                     <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Sun}" Content="/&gt;" Foreground="{StaticResource Normal}" FontSize="30"/>
                 </StackPanel>
             </Grid>
+            
             <Grid Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                <Label Content="Author: neo" Foreground="{StaticResource Normal}" FontSize="12"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Button Style="{StaticResource TransparentButton}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Command="{Binding ChangeThemeCommand}" Height="30" Width="30">
+                        <Grid>
+                            <Image Source="/Assets/logo.png"/>
+                        </Grid>
+                    </Button>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Label Content="Author: neo"  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{StaticResource Normal}" FontSize="12"/>
+                </Grid>
             </Grid>
         </Grid>
 

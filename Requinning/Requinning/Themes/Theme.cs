@@ -14,7 +14,7 @@ namespace Requinning.Themes
     public class Theme
     {
         private string path = "themes.json";
-        private Models.ThemeModel themeModel { get; set; }
+        private Models.ThemeModel.Root themeModel { get; set; }
 
 
         public Theme()
@@ -26,8 +26,23 @@ namespace Requinning.Themes
         {
             if (File.Exists(path) == true)
             {
-                themeModel = JsonConvert.DeserializeObject<Models.ThemeModel>(File.ReadAllText(path));
+                themeModel = JsonConvert.DeserializeObject<Models.ThemeModel.Root>(File.ReadAllText(path));
+                Apply(themeModel.selected);
             }
+        }
+
+        public List<Models.ThemeModel.Theme> GetThemes()
+        {
+            return (themeModel.themes);
+        }
+
+        private void Save(string theme)
+        {
+            if (File.Exists(path) == true)
+            {
+                File.Delete(path);
+            }
+            File.WriteAllText(path, JsonConvert.SerializeObject(themeModel));
         }
 
         public void Apply(string theme)
@@ -38,6 +53,7 @@ namespace Requinning.Themes
             {
                 if (_theme.name == $"{theme}")
                 {
+                    themeModel.selected = theme;
                     Brushes = new Dictionary<string, string>()
                     {
                         { "Background", _theme.Background},
@@ -55,6 +71,7 @@ namespace Requinning.Themes
                     }
                 }
             }
+            Save(theme);
         }
     }
 }

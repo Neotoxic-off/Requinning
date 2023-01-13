@@ -8,8 +8,11 @@ namespace Requinning.Models
 {
     public class ThemeModel
     {
-        public string selected { get; set; }
-        public List<Theme> themes { get; set; }
+        public class Root
+        {
+            public string selected { get; set; }
+            public List<Theme> themes { get; set; }
+        }
 
         public class Theme
         {

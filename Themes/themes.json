@@ -1,0 +1,65 @@
+{
+    "selected": "Purple",
+    "themes": [
+        {
+            "name": "Purple",
+            "Background": "#2A2B3B",
+            "ContentBackground": "#404251",
+            "Normal": "#ADB1BF",
+            "Title": "#FFE7F5",
+            "Action": "#c04cfd",
+            "Hover": "#7209b7",
+            "Disabled": "#404251"
+        },
+        {
+            "name": "Pink",
+            "Background": "#2A2B3B",
+            "ContentBackground": "#404251",
+            "Normal": "#ADB1BF",
+            "Title": "#FFE7F5",
+            "Action": "#ff99ac",
+            "Hover": "#ff85a1",
+            "Disabled": "#404251"
+        },
+        {
+            "name": "Blue",
+            "Background": "#2A2B3B",
+            "ContentBackground": "#404251",
+            "Normal": "#ADB1BF",
+            "Title": "#FFE7F5",
+            "Action": "#8ecae6",
+            "Hover": "#219ebc",
+            "Disabled": "#404251"
+        },
+        {
+            "name": "Green",
+            "Background": "#2A2B3B",
+            "ContentBackground": "#404251",
+            "Normal": "#ADB1BF",
+            "Title": "#FFE7F5",
+            "Action": "#2a9d8f",
+            "Hover": "#264653",
+            "Disabled": "#404251"
+        },
+        {
+            "name": "Orange",
+            "Background": "#2A2B3B",
+            "ContentBackground": "#404251",
+            "Normal": "#ADB1BF",
+            "Title": "#FFE7F5",
+            "Action": "#e9c46a",
+            "Hover": "#f4a261",
+            "Disabled": "#404251"
+        },
+        {
+            "name": "Red",
+            "Background": "#2A2B3B",
+            "ContentBackground": "#404251",
+            "Normal": "#ADB1BF",
+            "Title": "#FFE7F5",
+            "Action": "#ef233c",
+            "Hover": "#d90429",
+            "Disabled": "#404251"
+        }
+    ]
+}

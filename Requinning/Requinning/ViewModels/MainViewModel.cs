@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Win32;
 using Requinning.Themes;
+using System.Diagnostics;
 
 namespace Requinning.ViewModels
 {
@@ -25,6 +26,7 @@ namespace Requinning.ViewModels
         public DelegateCommand SelectModuleCommand { get; set; }
         public DelegateCommand SelectFileCommand { get; set; }
         public DelegateCommand ChangeThemeCommand { get; set; }
+        public DelegateCommand OpenGithubCommand { get; set; }
 
 
         public List<string> Modules { get; set; }
@@ -42,6 +44,7 @@ namespace Requinning.ViewModels
             SelectModuleCommand = new DelegateCommand(SelectModule);
             SelectFileCommand = new DelegateCommand(SelectFile);
             ChangeThemeCommand = new DelegateCommand(ChangeTheme);
+            OpenGithubCommand = new DelegateCommand(OpenGithub);
 
             Theme = new Theme();
             ThemeIndex = 0;
@@ -107,16 +110,23 @@ namespace Requinning.ViewModels
         {
             List<Models.ThemeModel.Theme> themes = Theme.GetThemes();
 
-            ThemeIndex = ((ThemeIndex >= themes.Count() - 1) ? 0 : ThemeIndex++);
-   
-             
-       
- 
-      
+            if (themes != null)
+            {
+                if (themes.Count() > 0)
+                {
+                    ThemeIndex = ((ThemeIndex >= themes.Count() - 1) ? 0 : ThemeIndex + 1);
+                    Theme.Apply(themes[ThemeIndex].name);
+                    Logger.Record($"Theme set to {themes[ThemeIndex].name}");
+                }
+            } else
+            {
+                Logger.Record("No theme to set");
+            }
+        }
 
-
-
-            Theme.Apply(themes[ThemeIndex].name);
+        private void OpenGithub(object param)
+        {
+            Process.Start("https://github.com/Neotoxic-off");
         }
     }
 }

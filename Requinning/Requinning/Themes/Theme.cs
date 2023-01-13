@@ -33,7 +33,9 @@ namespace Requinning.Themes
 
         public List<Models.ThemeModel.Theme> GetThemes()
         {
-            return (themeModel.themes);
+            if (themeModel != null)
+                return (themeModel.themes);
+            return (null);
         }
 
         private void Save(string theme)

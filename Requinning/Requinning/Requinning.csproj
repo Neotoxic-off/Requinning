@@ -90,7 +90,22 @@
     </Compile>
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\MainModel.cs" />
-    <Compile Include="Models\ProtectionsModel.cs" />
+    <Compile Include="Models\Protections\Ctor.cs" />
+    <Compile Include="Models\Protections\Assembly.cs" />
+    <Compile Include="Models\Protections\Blacklists.cs" />
+    <Compile Include="Models\Protections\Collection.cs" />
+    <Compile Include="Models\Protections\Map.cs" />
+    <Compile Include="Models\Protections\Ints.cs" />
+    <Compile Include="Models\Protections\Classes.cs" />
+    <Compile Include="Models\Protections\Module.cs" />
+    <Compile Include="Models\Protections\Strings.cs" />
+    <Compile Include="Models\Protections\Methods.cs" />
+    <Compile Include="Models\Protections\Namespaces.cs" />
+    <Compile Include="Models\Protections\Fields.cs" />
+    <Compile Include="Models\Protections\Events.cs" />
+    <Compile Include="Models\Protections\Parameters.cs" />
+    <Compile Include="Models\Protections\Properties.cs" />
+    <Compile Include="Models\Protections\ProtectionBaseModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LoggerViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -153,5 +168,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

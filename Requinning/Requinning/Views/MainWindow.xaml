@@ -65,15 +65,16 @@
             <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel>
                     <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Clean Assembly" Content="Clean Assembly" Foreground="{StaticResource Normal}" FontSize="15"/>
-                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Methods" Content="Obfuscate Methods" Foreground="{StaticResource Normal}" FontSize="15"/>
-                    <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Namespaces" Content="Obfuscate Namespaces" Foreground="{StaticResource Normal}" FontSize="15"/>
-                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Classes" Content="Obfuscate Classes" Foreground="{StaticResource Normal}" FontSize="15"/>-->
-                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Parameters" Content="Obfuscate Parameters" Foreground="{StaticResource Normal}" FontSize="15"/>
-                    <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Properties" Content="Obfuscate Properties" Foreground="{StaticResource Normal}" FontSize="15"/>-->
-                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Events" Content="Obfuscate Events" Foreground="{StaticResource Normal}" FontSize="15"/>
-                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Types" Content="Obfuscate Types" Foreground="{StaticResource Normal}" FontSize="15"/>
-                    <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Strings" Content="Obfuscate Strings" Foreground="{StaticResource Normal}" FontSize="15"/>-->
-                    <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Obfuscate Int" Content="Obfuscate Int" Foreground="{StaticResource Normal}" FontSize="15"/>-->
+                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Module" Content="Rename Module" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Methods" Content="Rename Methods" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Namespaces" Content="Rename Namespaces" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Classes" Content="Obfuscate Classes" Foreground="{StaticResource Normal}" FontSize="15"/>-->
+                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Parameters" Content="Rename Parameters" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Properties" Content="Rename Properties" Foreground="{StaticResource Normal}" FontSize="15"/>-->
+                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Events" Content="Rename Events" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Types" Content="Rename Types" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Strings" Content="Rename Strings" Foreground="{StaticResource Normal}" FontSize="15"/>-->
+                    <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Int" Content="Rename Int" Foreground="{StaticResource Normal}" FontSize="15"/>-->
                     <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Remove Ctor" Content="Remove Ctor" Foreground="{StaticResource Normal}" FontSize="15"/>
                 </StackPanel>
             </Grid>

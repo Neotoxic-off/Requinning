@@ -72,7 +72,7 @@
                     <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Parameters" Content="Rename Parameters" Foreground="{StaticResource Normal}" FontSize="15"/>
                     <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Properties" Content="Rename Properties" Foreground="{StaticResource Normal}" FontSize="15"/>-->
                     <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Events" Content="Rename Events" Foreground="{StaticResource Normal}" FontSize="15"/>
-                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Types" Content="Rename Types" Foreground="{StaticResource Normal}" FontSize="15"/>
+                    <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Fields" Content="Rename Fields" Foreground="{StaticResource Normal}" FontSize="15"/>
                     <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Strings" Content="Rename Strings" Foreground="{StaticResource Normal}" FontSize="15"/>-->
                     <!--<CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Rename Int" Content="Rename Int" Foreground="{StaticResource Normal}" FontSize="15"/>-->
                     <CheckBox Style="{StaticResource ModernCheck}" Command="{Binding SelectModuleCommand}" CommandParameter="Remove Ctor" Content="Remove Ctor" Foreground="{StaticResource Normal}" FontSize="15"/>

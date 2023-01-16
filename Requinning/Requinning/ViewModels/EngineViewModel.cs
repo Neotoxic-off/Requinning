@@ -15,11 +15,11 @@ namespace Requinning.ViewModels
 {
     public class EngineViewModel: BaseViewModel
     {
-        private Models.Protections.Collection Collection { get; set; }
-        private LoggerViewModel Logger { get; set; }
-        private ModuleDef Module { get; set; }
         private string path { get; set; }
+        private ModuleDef Module { get; set; }
+        private LoggerViewModel Logger { get; set; }
         private Dictionary<string, Action> Binding { get; set; }
+        private Models.Protections.Collection Collection { get; set; }
 
         public EngineViewModel(LoggerViewModel Logger)
         {

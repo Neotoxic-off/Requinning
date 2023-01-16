@@ -67,6 +67,5 @@ namespace Requinning.Models.Protections
                     return (true);
             return (false);
         }
-
     }
 }

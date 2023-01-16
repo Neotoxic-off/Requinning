@@ -13,12 +13,14 @@ namespace Requinning.Themes
 {
     public class Theme
     {
-        private string path = "themes.json";
+        private string path { get; set; }
         private Models.ThemeModel.Root themeModel { get; set; }
 
 
         public Theme()
         {
+            path = "themes.json";
+
             Load();
         }
 

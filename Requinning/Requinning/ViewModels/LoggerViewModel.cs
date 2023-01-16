@@ -21,6 +21,7 @@ namespace Requinning.ViewModels
         {
             logs = new List<string>();
         }
+        
         public void Record(string message)
         {
             this.Log = message;

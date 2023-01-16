@@ -14,19 +14,21 @@ namespace Requinning.ViewModels
     public class MainViewModel: BaseViewModel
     {
         public MainModel MainModel { get; set; }
-        public SettingsViewModel Settings { get; set; }
         public EngineViewModel Engine { get; set; }
         public LoggerViewModel Logger { get; set; }
+        public SettingsViewModel Settings { get; set; }
 
         public Theme Theme { get; set; }
         private int ThemeIndex { get; set; }
 
+        private List<Models.ThemeModel.Theme> themes { get; set; }
+
         private DelegateCommand Loader { get; set; }
         public DelegateCommand ObfuscateCommand { get; set; }
-        public DelegateCommand SelectModuleCommand { get; set; }
         public DelegateCommand SelectFileCommand { get; set; }
-        public DelegateCommand ChangeThemeCommand { get; set; }
         public DelegateCommand OpenGithubCommand { get; set; }
+        public DelegateCommand ChangeThemeCommand { get; set; }
+        public DelegateCommand SelectModuleCommand { get; set; }
 
 
         public List<string> Modules { get; set; }
@@ -39,19 +41,25 @@ namespace Requinning.ViewModels
             Settings = new SettingsViewModel();
             Engine = new EngineViewModel(Logger);
 
-            Loader = new DelegateCommand(Load);
-            ObfuscateCommand = new DelegateCommand(Engine.Obfuscate);
-            SelectModuleCommand = new DelegateCommand(SelectModule);
-            SelectFileCommand = new DelegateCommand(SelectFile);
-            ChangeThemeCommand = new DelegateCommand(ChangeTheme);
-            OpenGithubCommand = new DelegateCommand(OpenGithub);
+            Commands();
 
             Theme = new Theme();
             ThemeIndex = 0;
+            themes = Theme.GetThemes();
 
             Modules = new List<string>();
 
             Loader.Execute(null);
+        }
+
+        private void Commands()
+        {
+            Loader = new DelegateCommand(Load);
+            OpenGithubCommand = new DelegateCommand(OpenGithub);
+            SelectFileCommand = new DelegateCommand(SelectFile);
+            ChangeThemeCommand = new DelegateCommand(ChangeTheme);
+            SelectModuleCommand = new DelegateCommand(SelectModule);
+            ObfuscateCommand = new DelegateCommand(Engine.Obfuscate);
         }
 
         private void Load(object param)
@@ -108,8 +116,6 @@ namespace Requinning.ViewModels
 
         private void ChangeTheme(object param)
         {
-            List<Models.ThemeModel.Theme> themes = Theme.GetThemes();
-
             if (themes != null)
             {
                 if (themes.Count() > 0)
